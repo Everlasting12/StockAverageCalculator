@@ -107,10 +107,10 @@
 
         function calculateIt(firstunit, firstunitprice, secondunit, secondunitprice) {
 
-            firstunit = parseInt(firstunit);
-            firstunitprice = parseInt(firstunitprice);
-            secondunit = parseInt(secondunit);
-            secondunitprice = parseInt(secondunitprice);
+            firstunit = parseFloat(firstunit);
+            firstunitprice = parseFloat(firstunitprice);
+            secondunit = parseFloat(secondunit);
+            secondunitprice = parseFloat(secondunitprice);
 
 
             const totalUnits = firstunit + secondunit;
@@ -129,15 +129,15 @@
 
 
 
-            document.querySelector('#AmountInvestedFirst').innerText = firstTotal;
+            document.querySelector('#AmountInvestedFirst').innerText = firstTotal.toFixed(3);
 
-            document.querySelector('#AmountInvestedSecond').innerText = secondTotal;
+            document.querySelector('#AmountInvestedSecond').innerText = secondTotal.toFixed(3);
 
             document.querySelector('#TotalUnits').innerText = totalUnits;
 
             document.querySelector('#AveragePrice').innerText = average.toFixed(3);
 
-            document.querySelector('#TotalAmount').innerText = total;
+            document.querySelector('#TotalAmount').innerText = total.toFixed(3);
 
 
 
